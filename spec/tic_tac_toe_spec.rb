@@ -72,6 +72,16 @@ describe(Game) do
     it('checks for a winner at turn 6 and up') do
     end
 
+    it('switches current player') do
+    end
+
+  end
+
+  describe('#do_turn') do
+    it('accepts a player and space index then marks the space') do
+      # test_game = Game.new()
+      # test_game.do_turn()
+    end
   end
 
 end
