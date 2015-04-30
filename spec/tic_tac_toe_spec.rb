@@ -9,13 +9,18 @@ describe(Player) do
 
   describe("#mark") do
     it("returns the player's mark") do
-      test_player = Player.new({ :mark => "X" })
+      test_player = Player.new(mark: "X", active: true)
       expect(test_player.mark()).to(eq("X"))
     end
   end
 
+  describe("#active") do
+    it("returns the active state of the player") do
+      test_player = Player.new(mark: "X", active: true)
+      expect(test_player.active()).to(eq(true))
+    end
+  end
 end
-
 describe(Space) do
   describe("#x_coordinate") do
     it("returns the space's x_coordinate") do
@@ -26,7 +31,7 @@ describe(Space) do
 
   describe("#mark_by") do
     it('let a player change the state of a space') do
-      test_player = Player.new(mark: "X")
+      test_player = Player.new(mark: "X", active: true)
       test_space = Space.new(x_coord: 1, y_coord: 2, state: nil)
       test_space.mark_by(test_player)
       expect(test_space.state()).to(eq("X"))
@@ -47,9 +52,6 @@ describe(Game) do
   describe('initialize') do
     it('creates two players and a board.') do
       test_game = Game.new()
-      test_player1 = Player.new(mark: 'X')
-      test_player2 = Player.new(mark: 'O')
-      test_board = Board.new()
       expect(Game.all[0].mark()).to(eq('X'))
     end
   end
@@ -73,14 +75,18 @@ describe(Game) do
     end
 
     it('switches current player') do
+      # test_game = Game.new()
+      # test_game.next_turn()
+      # expect()
     end
 
   end
 
   describe('#do_turn') do
     it('accepts a player and space index then marks the space') do
-      # test_game = Game.new()
-      # test_game.do_turn()
+      #  test_game = Game.new()
+      #  test_game.do_turn()
+
     end
   end
 
