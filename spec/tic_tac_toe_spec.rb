@@ -75,9 +75,9 @@ describe(Game) do
     end
 
     it('switches current player') do
-      # test_game = Game.new()
-      # test_game.next_turn()
-      # expect()
+      test_game = Game.new()
+      test_game.next_turn()
+      expect(test_game.player_1.active()).to(eq(false))
     end
 
   end
