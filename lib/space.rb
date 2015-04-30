@@ -8,9 +8,7 @@ class Space
   end
 
   def mark_by(player)
-binding.pry
     @state = player.mark()
-
   end
 
 end

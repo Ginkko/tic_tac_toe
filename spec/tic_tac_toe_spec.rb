@@ -31,7 +31,14 @@ describe(Space) do
       test_space.mark_by(test_player)
       expect(test_space.state()).to(eq("X"))
     end
-
   end
-
 end
+
+describe(Board) do
+  describe('initialize') do
+    it('creates 9 spaces when it is initialized') do
+      test_board = Board.new()
+      expect(test_board.all[8].y_coord()).to(eq(3))
+      end
+    end
+  end
