@@ -1,8 +1,8 @@
 class Board
-  @@board = []
+attr_reader(:board)
 
   def initialize
-    @@board = []
+    @board = []
     x = 0
     y = 0
     3.times do
@@ -10,12 +10,12 @@ class Board
       y = 0
       3.times do
         y += 1
-        @@board.push(Space.new(x_coord: x, y_coord: y, state: nil))
+        @board.push(Space.new(x_coord: x, y_coord: y, state: nil))
       end
     end
   end
 
   def self.all
-    @@board
+    @board
   end
 end

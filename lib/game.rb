@@ -5,12 +5,13 @@ attr_reader(:turn_count, :game_over)
   def initialize
     @player_1 = Player.new(mark: 'X')
     @player_2 = Player.new(mark: 'O')
+    @current_board = Board.new()
     @game_over = false
     @turn_count = 1
     @@game = []
     @@game.push(@player_1)
     @@game.push(@player_2)
-    @@game.push(Board.new())
+    @@game.push(@current_board)
   end
 
   def self.all

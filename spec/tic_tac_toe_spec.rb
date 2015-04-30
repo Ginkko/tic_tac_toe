@@ -38,7 +38,7 @@ describe(Board) do
   describe('initialize') do
     it('creates 9 spaces when it is initialized') do
       test_board = Board.new()
-      expect(Board.all[8].y_coord()).to(eq(3))
+      expect(test_board.board[8].y_coord()).to(eq(3))
       end
     end
   end
