@@ -62,6 +62,11 @@ describe(Game) do
     end
 
     it('checks to see if 9 moves have been completed') do
+      test_game = Game.new()
+      9.times do
+        test_game.next_turn()
+      end
+      expect(test_game.game_over).to(eq(true))
     end
 
     it('checks for a winner at turn 6 and up') do
