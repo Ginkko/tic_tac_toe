@@ -19,7 +19,7 @@ end
 describe(Space) do
   describe("#x_coordinate") do
     it("returns the space's x_coordinate") do
-      test_space = Space.new({ :x => 1, :y => 2 })
+      test_space = Space.new({ x_coord: 1, y_coord: 2 })
       expect(test_space.x_coord()).to(eq(1))
     end
   end
