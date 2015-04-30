@@ -16,11 +16,8 @@ attr_reader(:turn_count, :game_over)
   end
 
   def next_turn
-    if @turn_count < 9
-      @turn_count += 1
-    else
-      @game_over = true
-    end
+    @game_over = true if @turn_count < 9
+    @turn_count += 1
   end
 
 end
