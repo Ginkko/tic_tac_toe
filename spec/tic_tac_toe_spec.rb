@@ -53,4 +53,20 @@ describe(Game) do
       expect(Game.all[0].mark()).to(eq('X'))
     end
   end
+
+  describe('#next_turn') do
+    it('increments the turn counter by 1') do
+      test_game = Game.new()
+      test_game.next_turn()
+      expect(test_game.turn_count()).to(eq(2))
+    end
+
+    it('checks to see if 9 moves have been completed') do
+    end
+
+    it('checks for a winner at turn 6 and up') do
+    end
+
+  end
+
 end
