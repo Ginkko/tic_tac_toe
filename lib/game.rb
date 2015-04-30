@@ -16,6 +16,5 @@ attr_reader(:turn_count)
 
   def next_turn
     @turn_count += 1
-
   end
 end
