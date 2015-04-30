@@ -38,7 +38,19 @@ describe(Board) do
   describe('initialize') do
     it('creates 9 spaces when it is initialized') do
       test_board = Board.new()
-      expect(test_board.all[8].y_coord()).to(eq(3))
+      expect(Board.all[8].y_coord()).to(eq(3))
       end
     end
   end
+
+describe(Game) do
+  describe('initialize') do
+    it('creates two players and a board.') do
+      test_game = Game.new()
+      test_player1 = Player.new(mark: 'X')
+      test_player2 = Player.new(mark: 'O')
+      test_board = Board.new()
+      expect(Game.all[0].mark()).to(eq('X'))
+    end
+  end
+end
