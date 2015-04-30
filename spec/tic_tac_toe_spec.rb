@@ -15,3 +15,13 @@ describe(Player) do
   end
 
 end
+
+describe(Space) do
+  describe("#x_coordinate") do
+    it("returns the space's x_coordinate") do
+      test_space = Space.new({ :x => 1, :y => 2 })
+      expect(test_space.x_coord()).to(eq(1))
+    end
+  end
+
+end
