@@ -19,3 +19,5 @@ attr_reader(:board)
     @board
   end
 end
+
+
